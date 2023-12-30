@@ -1,0 +1,17 @@
+.box {
+    display: flex;
+    align-items: center;
+}
+.horizontal-box {
+    display: flex;
+}
+.small-box {
+    width:30px;
+    height: 30px;
+    border: 1px;
+    margin: 2px;
+}
+.containerr {
+    display: flex;
+    justify-content: center;
+}
