@@ -24,6 +24,7 @@ li{
     font-size: large;
     margin-top: 3px;
     margin-bottom: 3px;
+    cursor: pointer;
 }
 .nav2{
     padding: 6px;
@@ -62,9 +63,16 @@ h1 button {
     margin-top: 1px;
     width: 100%;
     padding: 1px;
+    
 
     
 }
 .nav3 input {
     color: white;
+}
+a{
+    cursor: pointer;
+}
+.menu {
+    margin-left:400px ;
 }
