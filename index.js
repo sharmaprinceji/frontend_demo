@@ -1,12 +1,10 @@
 function getdata(){
-    //document.getElementById("xyz").innerHTML="hello shweeta !";
-    //document.write('hjgliukjbjb');
-    //window.alert('heloo !')
-   //console.log('hello prince !')
-  // window.print('welcome to javascript tutorials! ')
-
+    document.getElementById("xyz").innerHTML=Date();
+  //document.write('hjgliukjbjb');
+  //window.alert('heloo !')
+  //console.log('hello prince !')
+  // window.print('welcome to javascript tutorials!'
 }
-
 
 //normal function
 // function test(x,y){
@@ -16,8 +14,8 @@ function getdata(){
 // }
 
 //esc-5 or 6//arrow function.
-let test=(x,y)=>{return x+" "+y};
-const result=test('shweeta','bharti');
+// let test=(x,y)=>{return x+" "+y};
+// const result=test('shweeta','bharti');
 
-console.log("multiplication of x and y is :",result);
+// console.log("multiplication of x and y is :",result);
 

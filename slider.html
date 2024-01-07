@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-step Box</title>
+  <style>
+    .container {
+      width: 300px;
+      margin: 50px auto;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+    }
+    .button{
+        width: 300px;
+      margin: 50px auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .next{
+        margin-left: 150px;
+    }
+
+    .step {
+      display: none;
+      float: left;
+      box-sizing: border-box;
+      margin-right: 20px;
+    }
+    .step.active {
+      display: block;
+      height: 200px;
+      width: 200px;
+      margin-top: 20px;
+    }
+
+    button {
+     margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+    
+  <div class="step active" id="step1" style="background-color: aqua;">
+    <h2>Step 1</h2>
+    <p>Content for step 1</p>
+  </div>
+
+  <div class="step active" id="step2" style="background-color: rgb(60, 203, 79);">
+    <h2>Step 2</h2>
+    <p>Content for step 2</p>
+  </div>
+
+  <div class="step" id="step3" style="background-color: rgb(221, 67, 16);">
+    <h2>Step 3</h2>
+    <p>Content for step 3</p>
+  </div>
+
+  <div class="step" id="step4" style="background-color: yellow;">
+    <h2>Step 4</h2>
+    <p>Content for step 4</p>
+  </div>
+
+  <div class="step" id="step5" style="background-color: rgb(146, 234, 130);">
+    <h2>Step 5</h2>
+    <p>Content for step 5</p>
+  </div>
+
+  <div class="step" id="step6" style="background-color: rgb(0, 42, 255);">
+    <h2>Step 6</h2>
+    <p>Content for step 6</p>
+  </div>
+</div>
+<div class="button">
+  <button class="prev" onclick="prevStep()">Previous</button>
+  <button class="next" onclick="nextStep()">Next</button>
+</div>
+
+<script>
+  let currentStep = 1;
+
+  function showStep(step) {
+    document.querySelectorAll('.step').forEach(function (el) {
+      el.classList.remove('active');
+    });
+
+    for (let i = step; i < step + 2; i++) {
+      document.getElementById(`step${i}`).classList.add('active');
+    }
+  }
+
+  function nextStep() {
+    if (currentStep < 4) {
+      currentStep += 2;
+      showStep(currentStep);
+    }
+  }
+
+  function prevStep() {
+    if (currentStep > 1) {
+      currentStep -= 2;
+      showStep(currentStep);
+    }
+  }
+
+  showStep(currentStep);
+</script>
+
+</body>
+</html>
