@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo {
+          width: 80px;
+          height: 80px;
+          background-color: red;
+          text-align: center;
+          margin-top: 20px;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 18px;
+          font-size: xx-large;
+          animation: none; 
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 180px;
+        }
+        button{
+            background-color: blue;
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+    
+        @keyframes scrollAnimation {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div id="demo"></div>
+    <button onclick="ludodice()">Click</button>
+   </div>
+<script>
+function ludodice(){
+    var dice = document.getElementById("demo");
+    dice.innerHTML = Math.floor(Math.random() * 6) + 1;
+    dice.style.animation = "scrollAnimation 2s linear infinite";
+
+    setTimeout(function() {
+        dice.style.animation = "none";
+    }, 500); 
+}
+</script>
+
+</body>
+</html>
