@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-counter</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+        }
+        .num{
+            margin-top: 50px;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="num" data-val="30" style="color: rgb(210, 218, 218);"></div>
+    <div class="num" data-val="60" style="color: yellow;"></div>
+    <div class="num" data-val="90" style="color:  orange;"></div>
+  </div>
+  <script>
+    let valdisplay=document.querySelectorAll('.num');
+    let interval=4000;
+
+    valdisplay.forEach((data)=>{
+        let startval=0;
+        let endval=parseInt(data.getAttribute("data-val"));
+
+        let duration=Math.floor(interval/endval);
+        let counter=setInterval(function(){
+            startval+=1;
+            data.textContent=startval;
+            if(startval===endval){
+                clearInterval(counter);
+            }
+        },duration);
+    })
+
+  </script>
+</body>
+</html>
