@@ -45,9 +45,13 @@ function getdata(){
 // const res=arr.filter(myFunction);
 // console.log(res);
 
-let sum = arr.reduce(myFunction);
+// let sum = arr.reduce(myFunction);
 
-function myFunction(total, value) {
-  return total + value;
-}
-console.log(sum);
+// function myFunction(total, value) {
+//   return total + value;
+// }
+// console.log(sum);
+
+// (function add(a,b){
+//   console.log(a+b);
+// })(2,3); ///self invoke function.
