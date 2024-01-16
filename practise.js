@@ -88,12 +88,12 @@ let num=[1,3,2,2,1,3,2,3,1,1,3,4,5,1,2,2,2,2,3,3,3,3];   //1->5, 2->3, 3->4, 4->
 let k=3;        
 // let maxi = 0;
 // num.forEach((data) => {                        //time=n+n+(k*n)==2n+kn==> 2n+n^2=>  0(n^2)  space=o(n) wrost time complexity -->brute force approach.
-//   if (maxi < data) {
+//   if (maxi < data) {  
 //     maxi = data;
 //   }
 // });
 // //var count = new Array(maxi + 1).fill(0);
-// for (let i = 0; i < num.length; i++) {
+// for(let i = 0; i < num.length; i++){
 //   count[num[i]]++;
 // }
 // //console.log(count)
@@ -112,15 +112,41 @@ let k=3;
 
 const count = new Map();
 num.forEach((data) => {
-  count.set(data, (count.get(data) || 0) + 1);
+ // count.set(data, (count.get(data) || 0) + 1);
 });
 //console.log(count)
 const sortedCount = [...count.entries()].sort((a,b)=>b[1]-a[1]); //nlogn->time optimize approach
 //console.log(sortedCount);
-for (let i = 0; i < k && i < sortedCount.length; i++){
-  console.log(sortedCount[i][0]);
+let l=0
+while(l<k && l<sortedCount.length){
+    //console.log(sortedCount[l][0]);
+    l++;
 }
 
+//convert digits into word dynamic
+const digit = 9860;
+const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+const teens = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+const tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+
+const numToWords = (num) => {
+    if (num === 0) return "zero";
+    if (num < 10) return ones[num];
+    if (num < 20) return teens[num];
+
+    if (num < 100) {
+        return tens[Math.floor(num / 10)] + " " + ones[num % 10];
+    }
+
+    if (num < 1000) {
+        return ones[Math.floor(num / 100)] + " hundred " + numToWords(num % 100);
+    }
+
+    return ones[Math.floor(num / 1000)] + " thousand " + numToWords(num % 1000);
+};
+
+const result = numToWords(digit) +"only";
+console.log(result);
 
 
 
