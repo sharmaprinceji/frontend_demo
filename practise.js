@@ -111,8 +111,8 @@ while(j<arr2.length){
 // }
 
 
-// let num=[1,3,2,2,1,3,2,3,1,1,3,4,5,1,2,2,2,2,3,3,3,3];   //1->5, 2->3, 3->4, 4->1, 5->1 //1,3,2,4,5
-//  let k=3;
+let nums=[1,3,2,2,1,3,2,3,1,1,3,4,5,1,2,2,2,2,3,3,3,3];   //1->5, 2->3, 3->4, 4->1, 5->1 //1,3,2,4,5
+  let k=2;
 // const count = new Map();
 // num.forEach((data) => {
 //   count.set(data, (count.get(data) || 0) + 1);
@@ -126,6 +126,25 @@ while(j<arr2.length){
 //     l++;
 // }
 
+    //method -2 time->o(n)
+    // const freqMap = new Map();
+    // const bucket = [];
+    // const result = [];
+    
+    // for(let num of nums) {
+    //     freqMap.set(num, (freqMap.get(num) || 0) + 1);
+    // }
+    
+    // for(let [num, freq] of freqMap) {
+    //     bucket[freq] = (bucket[freq] || new Set()).add(num);
+    // }
+    // console.log(bucket)
+    
+    // for(let i = bucket.length-1; i >= 0; i--) {
+    //     if(bucket[i]) result.push(...bucket[i]);
+    //     if(result.length === k) break;
+    // }
+    // console.log(result);
 
 //method-3
 // let num = [ 0, 0, 1, 3, 2, 2, 1, 3, 2, 3, 1, 1, 3, 4, 5, 1, 2, 2, 2, 2, 3, 3, 3, 3];
@@ -136,6 +155,8 @@ while(j<arr2.length){
 //     Object.assign(result, { [j]: num.filter((val) => val === j).length });
 // }
 // let num1 = Object.keys(result).map((val) => [val, result[val]]).sort((a, b) => a[1] - b[1]).reverse();
+
+
 //method--2
 // let num = [ 0, 0, 1, 3, 2, 2, 1, 3, 2, 3, 1, 1, 3, 4, 5, 1, 2, 2, 2, 2, 3, 3, 3, 3];
 // let k = 2;
@@ -161,11 +182,9 @@ while(j<arr2.length){
 //     if (num === 0) return "zero";
 //     if (num < 10) return ones[num];
 //     if (num < 20) return teens[num];
-
 //     if (num < 100) {
 //         return tens[Math.floor(num / 10)] + " " + ones[num % 10];
 //     }
-
 //     if (num < 1000) {
 //         return ones[Math.floor(num / 100)] + " hundred " + numToWords(num % 100);
 //     }
@@ -187,6 +206,5 @@ while(j<arr2.length){
 //         return ones[Math.floor(num / 100000)] + " lakh " + numToWords(num % 100000);
 //     }
 // };
-
 // const result = numToWords(digit) + " only";
 // console.log(result);
