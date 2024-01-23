@@ -84,8 +84,8 @@ while(j<arr2.length){
 
 
 //find kth no of maximum frequent elements. or Top K Frequent Elements
-let num=[1,3,2,2,1,3,2,3,1,1,3,4,5,1,2,2,2,2,3,3,3,3];   //1->5, 2->3, 3->4, 4->1, 5->1 //1,3,2,4,5
-let k=3;        
+// let num=[1,3,2,2,1,3,2,3,1,1,3,4,5,1,2,2,2,2,3,3,3,3];   //1->5, 2->3, 3->4, 4->1, 5->1 //1,3,2,4,5
+// let k=3;        
 // let maxi = 0;
 // num.forEach((data) => {                        //time=n+n+(k*n)==2n+kn==> 2n+n^2=>  0(n^2)  space=o(n) wrost time complexity -->brute force approach.
 //   if (maxi < data) {  
@@ -110,45 +110,83 @@ let k=3;
 //   //console.log(idx);
 // }
 
-const count = new Map();
-num.forEach((data) => {
- // count.set(data, (count.get(data) || 0) + 1);
-});
-//console.log(count)
-const sortedCount = [...count.entries()].sort((a,b)=>b[1]-a[1]); //nlogn->time optimize approach
-//console.log(sortedCount);
-let l=0
-while(l<k && l<sortedCount.length){
-    //console.log(sortedCount[l][0]);
-    l++;
-}
+
+// let num=[1,3,2,2,1,3,2,3,1,1,3,4,5,1,2,2,2,2,3,3,3,3];   //1->5, 2->3, 3->4, 4->1, 5->1 //1,3,2,4,5
+//  let k=3;
+// const count = new Map();
+// num.forEach((data) => {
+//   count.set(data, (count.get(data) || 0) + 1);
+// });
+// //console.log(count);
+// const sortedCount = [...count.entries()].sort((a,b)=>b[1]-a[1]);     //nlogn->time optimize approach
+// //console.log(sortedCount)
+// let l=0
+// while(l<k && l<sortedCount.length){
+//     //console.log(sortedCount[l][0]);
+//     l++;
+// }
+
+
+//method-3
+// let num = [ 0, 0, 1, 3, 2, 2, 1, 3, 2, 3, 1, 1, 3, 4, 5, 1, 2, 2, 2, 2, 3, 3, 3, 3];
+// let k = 2;
+// let num2 = []
+// let result = {};
+// for (let j = 0; j <= num[num.length - 1]; j++) {
+//     Object.assign(result, { [j]: num.filter((val) => val === j).length });
+// }
+// let num1 = Object.keys(result).map((val) => [val, result[val]]).sort((a, b) => a[1] - b[1]).reverse();
+//method--2
+// let num = [ 0, 0, 1, 3, 2, 2, 1, 3, 2, 3, 1, 1, 3, 4, 5, 1, 2, 2, 2, 2, 3, 3, 3, 3];
+// let k = 2;
+// let num2 = []
+// let num1 = [];
+// for (let j = 0; j <= num[num.length - 1]; j++) {
+//     num2.push([j, num.filter((val) => val === j).length])
+// }
+// num2 = num2.sort((a, b) => a[1] - b[1]).reverse();
+// for (let i = 0; i < k; i++) {
+//     //num2.push(parseInt(num1[i][0]))
+//     console.log(num2[i][0]);
+// }
+
 
 //convert digits into word dynamic
-const digit = 9860;
-const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-const teens = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
-const tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+// const digit = 17860;
+// const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+// const teens = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+// const tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 
-const numToWords = (num) => {
-    if (num === 0) return "zero";
-    if (num < 10) return ones[num];
-    if (num < 20) return teens[num];
+// const numToWords = (num) => {
+//     if (num === 0) return "zero";
+//     if (num < 10) return ones[num];
+//     if (num < 20) return teens[num];
 
-    if (num < 100) {
-        return tens[Math.floor(num / 10)] + " " + ones[num % 10];
-    }
+//     if (num < 100) {
+//         return tens[Math.floor(num / 10)] + " " + ones[num % 10];
+//     }
 
-    if (num < 1000) {
-        return ones[Math.floor(num / 100)] + " hundred " + numToWords(num % 100);
-    }
+//     if (num < 1000) {
+//         return ones[Math.floor(num / 100)] + " hundred " + numToWords(num % 100);
+//     }
 
-    return ones[Math.floor(num / 1000)] + " thousand " + numToWords(num % 1000);
-};
+//     if (num < 10000) {
+        // if (num % 1000 === 0) {
+        //     return ones[Math.floor(num / 1000)] + " thousand " + numToWords(num % 1000);
+        // } else {
+        //     return teens[Math.floor(num / 1000)] + " thousand " + numToWords(num % 1000);
+        // }
+    //     return teens[Math.floor(num / 1000)] + " thousand " + numToWords(num % 1000);
+    // }
 
-const result = numToWords(digit) +"only";
-console.log(result);
+    // if (num < 100000) {
+    //      return tens[Math.floor(num / 10000)] + " lakh " + numToWords(num % 10000);
+    // }
 
+//     if (num < 1000000 || num < 100000) {
+//         return ones[Math.floor(num / 100000)] + " lakh " + numToWords(num % 100000);
+//     }
+// };
 
-
-
-
+// const result = numToWords(digit) + " only";
+// console.log(result);
