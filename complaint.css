@@ -10,17 +10,15 @@ body{
 .box1{
     width: 45%;
     height: 200px;
-    background-color: gray;
-    display: block;
-    justify-content: space-between;
+    background-color: rgb(120, 32, 32); 
+    border-radius:5px dashed rgb(64, 223, 20);
+    border: 12px;
 }
 .box2{
     width: 45%;
     height: 200px;
-    background-color: grey;
-    border-color: black;
-    display: flex;
-    justify-content: center;
+    /* background-color: grey; */
+    border-radius: 3px solid green;
 }
 img{
     
