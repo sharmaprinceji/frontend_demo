@@ -208,3 +208,13 @@ let nums=[1,3,2,2,1,3,2,3,1,1,3,4,5,1,2,2,2,2,3,3,3,3];   //1->5, 2->3, 3->4, 4-
 // };
 // const result = numToWords(digit) + " only";
 // console.log(result);
+
+// function sumTo_n(n){
+//    //return n>1? n+sumTo_n(n-1):n;
+//    if(n<1){
+//     return n;
+//    }
+//    return n+sumTo_n(n-1);
+// }
+// console.log(sumTo_n(21));
+
