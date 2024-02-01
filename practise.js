@@ -208,3 +208,13 @@ console.log(count)
  };
  const result = numToWords(digit) + " only";
  console.log(result); */
+
+// function sumTo_n(n){
+//    //return n>1? n+sumTo_n(n-1):n;
+//    if(n<1){
+//     return n;
+//    }
+//    return n+sumTo_n(n-1);
+// }
+// console.log(sumTo_n(21));
+
