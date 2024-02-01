@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 80px;
+            height: 600px;
+            margin-top: 200px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 1px;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #b3a6a6;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+
+        
+        .social-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid black; 
+            color: grey;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .social:hover {
+            background-color: #45a049;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+        }
+        .social-buttons-container .social-button:hover {
+         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+        }
+
+
+        .social-button i {
+            margin-right: 8px;
+            color: blue;
+            border-color: black;
+        }
+        
+        
+
+        @media (max-width: 578px) {
+            .login-container {
+                width: 90%;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <img src="image/logo1-removebg-preview.png" alt="" style="width: 70px;height: 70px;margin-left:70px;">
+        <img src="/image/lolo2-removebg-preview (1).png" alt="" style="width: 70px; height: 60px; margin-left: 2px;">
+        <h2>Welcome Back</h2>
+        <form action="#" method="post">
+            <label for=""></label>
+            <input type="text" placeholder="Enter email" id="username">
+            <label for=""></label>
+            <input type="password" placeholder="Enter Password">
+
+            <button type="submit">Login</button>
+            <br>
+            <h5>Don't have an account? Signup</h5>
+
+            <div class="social-buttons-container">
+                <div class="button" style="margin-left: 1px;">
+                    <a href="#" class="social-button"><i class="fa-brands fa-google"></i>Continue with Google</a>
+                </div>
+               <div class="button" style="margin-left: 1px;">
+                <a href="#" class="social-button"><i class="fa-brands fa-apple"></i>Continue with Apple</a>
+               </div>
+                <div class="button" style="margin-left: 1px; ">
+                    <a href="#" class="social-button"><i class="fa-brands fa-microsoft"></i>Continue with Microsoft Acc</a>
+                </div>
+        </form>
+    </div>
+</body>
+</html>

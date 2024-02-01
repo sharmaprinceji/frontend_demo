@@ -38,7 +38,7 @@
         console.log("5 is present");
     }
  } */
- function palindrome(str)
+ /*function palindrome(str)
  {
     const temp=str.split("").reverse().join("");
     if(temp==str)
@@ -53,4 +53,26 @@
  {
     palindrome(str[i]);
 
+ } */
+ /*function substring_c(str)
+ {
+    const len=str.length;
+    var count=0;
+    for(let i=0;i<len;i++)
+    {
+        for(let j=i;j<len;j++)
+        {
+            console.log(str.substr(i,j-i+1));
+            count++;
+        }
+    }
+    console.log(count);
+    
  }
+ substring_c("shweta"); */
+ //using recursion
+ /*function substring_c(str)
+ {
+    const len=str.length;
+
+ }*/
