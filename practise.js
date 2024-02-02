@@ -218,3 +218,15 @@ console.log(count)
 // }
 // console.log(sumTo_n(21));
 
+function substring_str(str,start,end){
+ if(start >str.length){
+  return ;
+ }
+ console.log(str.substr(start,end-start+1));
+ if(end<str.length){
+  substring_str(start,end+1);
+ }
+ else{
+  substring_str(start+1,start+1);
+ }
+}
