@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"">
+    <title>Login Page</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 80px;
+    height: 600px;
+    margin-top: 200px;
+    
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 1px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+@media (max-width: 578px) {
+        .container {
+          width: 90%;
+          display: block;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="image/user.jpg" alt="" >
+        <h2>Welcome Back</h2>
+        <form action="#" method="post">
+            <label for=""></label>
+            <input type="text" placeholder="Enter email" id="username" >
+            <label for=""></label>
+            <input type="password" placeholder=" Enter Password">
+            
+            <button type="submit">Login</button>
+            <br>
+            <h5>Don't have an account? Signup</h5>
+            <button type="text">Continue with Google</button>
+            <button type="text">Continue with Microsoft Acc</button>
+            <button type="text">Continue with Apple</button>
+
+            
+        </form>
+    </div>
+</body>
+</html>
