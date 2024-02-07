@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="form3.css">
 </head>
 <body>
-    
-    
-
-    <div class="container" id = "container">
-        <h1>Event Organizer</h1>
+    <div class="container">
+        <nav>
+            <ul class="navbar">
+                <li class="cursor-pointer">
+                    <i class="fas fa-home mr-2"></i>dsfed</li>
+                <li class="cursor-pointer">DRAFT <br /><span>Last modified 2hr ago</span></li>
+                <li class="text-blue-400 cursor-pointer"><i class="fab fa-safari mr-2"></i>Arabic<i class="fas fa-chevron-down mx-1"></i></li>
+                <li class="text-blue-400 cursor-pointer"><i class="fas fa-file-laptop mr-2"></i>Preview</li>
+                <div class="button ml-auto cursor-pointer">
+                    <button>Publish <i class="fas fa-angle-down mx-2"></i></button>
+                </div>
+            </ul>
+        </nav>
         <form class="event-form">
+            <h1 >Event Organizer</h1>
             <div class="form-group">
                 <label for="eventName">Event Name:</label>
                 <input type="text" id="eventName" name="eventName" placeholder="Event name" required>
@@ -81,9 +90,12 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+       
+        
+
 
     
 
-    <script src = "form3.js"></script>
+    
 </body>
 </html>
