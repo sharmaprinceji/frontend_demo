@@ -1,0 +1,67 @@
+/*body {
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 500px;
+}*/
+body {
+    background-color: #6da4dba7; /* Set a light background color */
+}
+
+.container {
+    margin-top: 50px;
+     /* Add some top margin for spacing */
+}
+
+form {
+    max-width: 550px; /* Set a maximum width for the form */
+    margin: auto; /* Center the form within the container */
+    background-color: #ffffff; /* Set a white background color */
+    padding: 20px; /* Add some padding to the form */
+    border-radius: 10px; /* Add rounded corners to the form */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+label {
+    font-weight: bold; /* Make labels bold */
+    display: block; /* Display labels on a new line */
+    margin-bottom: 5px; /* Add some bottom margin for spacing */
+}
+
+input,
+select {
+    width: 100%; /* Make form controls take up full width */
+    padding: 8px; /* Add padding to form controls */
+    margin-bottom: 15px; /* Add bottom margin for spacing between controls */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.row {
+    margin-bottom: 15px; /* Add bottom margin for spacing between rows */
+}
+
+button {
+    background-color: #007bff; /* Set a primary button color */
+    color: #000000; /* Set text color to white */
+    padding: 10px 10px; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer; /* Add a pointer cursor to the button */
+}
+
+button:hover {
+    background-color: #364e68; /* Change button color on hover */
+}
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+h2 {
+    margin-left: 150px;
+}
